@@ -15,22 +15,9 @@ class Welcome extends Application
 	 */
 	public function index()
 	{
-		// this is the view we want shown
-		$this->data['pagebody'] = 'homepage';
-
-		// build the list of authors, to pass on to our view
-		$source = $this->quotes->all();
-		$elements = sizeof($source);
-		$authors = array ();
-		foreach ($source as $record)
-		{
-			if ($record['id'] == $elements){
-				$authors[] = array ('who' => $record['who'], 'mug' => $record['mug'], 'href' => $record['where'], 'what' => $record['what']);
-				break;
-			}
-		}
-		$this->data['authors'] = $authors;
-
+		$record = $this->quotes->get(6);
+		$this->data = array_merge($this->data, $record);
+		$this->data['pagebody'] = 'justone';
 		$this->render();
 	}
 
