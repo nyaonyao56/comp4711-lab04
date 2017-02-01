@@ -34,7 +34,7 @@ class Quotes extends CI_Model {
 	// retrieve a single quote
 	public function get($which)
 	{
-		// iterate over the data until we find the one we want
+		// iterate over the data until we find the one we pwant
 		foreach ($this->data as $record)
 			if ($record['id'] == $which)
 				return $record;
