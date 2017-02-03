@@ -53,3 +53,4 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = 'Welcome/random';
 $route['translate_uri_dashes'] = FALSE;
 $route['([a-z]{4})/bingo'] = 'Bingo';
+$route['show/(:num)'] = 'First/gimme/$1';
