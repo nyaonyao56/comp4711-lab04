@@ -23,4 +23,8 @@ class First extends Application
 		$this->data['pagebody'] = 'justone';
 		$this->render();
 	}
+	
+	public function zzz(){
+		$this -> index();
+	}
 }
