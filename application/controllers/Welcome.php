@@ -37,6 +37,7 @@ class Welcome extends Application
 		$this->render();
 	}
 	
+	//adding commet so i can commit properley
 	public function shucks() {
 		$record = $this->quotes->get(2);
 		$this->data = array_merge($this->data, $record);
